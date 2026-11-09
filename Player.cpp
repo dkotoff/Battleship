@@ -7,7 +7,7 @@ using std::cout;
 using std::cin;
 void Player::renderField(char(&f)[SIZE + 2][SIZE + 2])
 {
-	cout << "   À Á Â Ã Ä Å Æ Ç È Ê       ÎÁÎÇÍÀ×ÅÍÈß:\n";
+	cout << "   ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½       ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:\n";
 	for (int i = 1; i < SIZE + 1; i++) {
 		if (i != SIZE)
 			cout << ' ' << i;
@@ -16,15 +16,15 @@ void Player::renderField(char(&f)[SIZE + 2][SIZE + 2])
 		for (int j = 1; j < SIZE + 1; j++)
 			cout << ' ' << f[i][j];
 		if (i == 1)
-			cout << "       . — ïóñòàÿ êëåòêà";
+			cout << "       . ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 2)
-			cout << "       # — êîğàáëü";
+			cout << "       # ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 3)
-			cout << "       X — ïîïàäàíèå";
+			cout << "       X ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 4)
-			cout << "       o — ïğîìàõ";
+			cout << "       o ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 5)
-			cout << "       @ — êëåòêà, ãäå êîğàáëü íå ìîæåò íàõîäèòüñÿ";
+			cout << "       @ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		putchar('\n');
 	}
 	cout << "\n\n";
@@ -47,29 +47,29 @@ void Player::printHiddenFieldRow(const int& row)
 }
 void Player::createCoords(int& x, int& number)
 {
-	string alphabet = "ÀÁÂÃÄÅÆÇÈÊ";
+	string alphabet = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 	string letter{};
 	do {
 		x = 0;
 		number = -1;
-		cout << "ÍÀÏÈØÈÒÅ ×ÅĞÅÇ ÏĞÎÁÅË ÊÎÎĞÄÈÍÀÒÛ ÊËÅÒÊÈ!\n";
-		cout << "ÔÎĞÌÀÒ: ÁÓÊÂÀ ×ÈÑËÎ\t";
-		cout << "ÏĞÈÌÅĞ: À 1\n";
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!\n";
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½\t";
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ 1\n";
 		cin >> letter >> number;
-		if (cin.fail() || letter.size() > 1) { //ïğîâåğÿåò åñëè ââåëè íå ÷èñëî
+		if (cin.fail() || letter.size() > 1) { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 			cin.clear();
-			cin.ignore(10000, '\n');   // î÷èùàåì ÒÎËÜÊÎ êîãäà ğåàëüíî áûë ìóñîğ
-			cout << "ÎØÈÁÊÀ: ÂÂÅÄÈÒÅ ÁÓÊÂÀ ×ÈÑËÎ\n\n";
+			cin.ignore(10000, '\n');   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½\n\n";
 			continue;
 		}
-		int pos = alphabet.find(std::toupper(letter[0])); // ïîçèöèÿ áóêâû
-		if (pos == string::npos) { //åñëè íå íàøëè
-			cout << "ÍÅÊÎĞĞÅÊÒÍÀß ÁÓÊÂÀ. ÏÎÏĞÎÁÓÉÒÅ ÑÍÎÂÀ!\n\n";
+		int pos = alphabet.find(std::toupper(letter[0])); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+		if (pos == string::npos) { //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!\n\n";
 			continue;
 		}
 		x = pos + 1;
 		if (number < 1 || number > 10)
-			cout << "ÂÛ ÍÅÊÎĞĞÅÊÒÍÎ ÂÂÅËÈ ÂÒÎĞÓŞ ÊÎÎĞÄÈÍÀÒÓ. ÏÎÏĞÎÁÓÉÒÅ ÑÍÎÂÀ!\n\n";
+			cout << "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!\n\n";
 	} while (x == 0 || number < 1 || number > 10);
 }
 bool Player::close(int x, int y)
@@ -83,24 +83,24 @@ void Player::createShip(int len)
 	string direction{};
 	bool flag{ false };
 	do {
-		cout << "ÑÎÇÄÀÉÒÅ ÊÎĞÀÁËÜ ÄËÈÍÍÎÉ " << len << "!\n";
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " << len << "!\n";
 		int x{ 0 }, y{};
 		createCoords(x, y);
 		if (len != 1) {
-			std::cin.clear();                     // ñáğîñèòü ôëàãè îøèáîê
-			std::cin.ignore(10000, '\n');         // óäàëèòü âñ¸ äî ñèìâîëà '\n'
-			cout << "ÂÂÅÄÈÒÅ ÍÀÏĞÀÂËÅÍÈÅ ÊÎĞÀÁËß: ÂÂÅĞÕ, ÂÍÈÇ, ÂÏĞÀÂÎ ÈËÈ ÂËÅÂÎ\n";
+			std::cin.clear();                     // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			std::cin.ignore(10000, '\n');         // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ '\n'
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½\n";
 			cin >> direction;
 			std::transform(direction.begin(), direction.end(), direction.begin(), [](char c) {return std::toupper(c);});
 		}
 		else
-			direction = "ÂÏĞÀÂÎ";
+			direction = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		bool near{ true };
-		if (direction == "ÂÏĞÀÂÎ" && x <= 10 - len + 1) {
+		if (direction == "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" && x <= 10 - len + 1) {
 			for (int i = x; i < x + len; i++) {
 				if (close(y, i) || field[y][x] == '#') {
 					near = false;
-					cout << "ĞßÄÎÌ ÅÑÒÜ ÊÎĞÀÁËÜ! ÂÂÅÄÈÒÅ ÄĞÓÃÈÅ ÊÎÎĞÄÈÍÀÒÛ ÈËÈ ÍÀÏĞÀÂËÅÍÈÅ\n";
+					cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n";
 					break;
 				}
 			}
@@ -110,11 +110,11 @@ void Player::createShip(int len)
 				flag = true;
 			}
 		}
-		else if (direction == "ÂËÅÂÎ" && x >= len) {
+		else if (direction == "ï¿½ï¿½ï¿½ï¿½ï¿½" && x >= len) {
 			for (int i = x; i > x - len; i--) {
 				if (close(y, i) || field[y][x] == '#') {
 					near = false;
-					cout << "ĞßÄÎÌ ÅÑÒÜ ÊÎĞÀÁËÜ! ÂÂÅÄÈÒÅ ÄĞÓÃÈÅ ÊÎÎĞÄÈÍÀÒÛ ÈËÈ ÍÀÏĞÀÂËÅÍÈÅ\n";
+					cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n";
 					break;
 				}
 			}
@@ -124,11 +124,11 @@ void Player::createShip(int len)
 				flag = true;
 			}
 		}
-		else if (direction == "ÂÍÈÇ" && y <= 10 - len + 1) {
+		else if (direction == "ï¿½ï¿½ï¿½ï¿½" && y <= 10 - len + 1) {
 			for (int j = y; j < y + len; j++) {
 				if (close(j, x) || field[y][x] == '#') {
 					near = false;
-					cout << "ĞßÄÎÌ ÅÑÒÜ ÊÎĞÀÁËÜ! ÂÂÅÄÈÒÅ ÄĞÓÃÈÅ ÊÎÎĞÄÈÍÀÒÛ ÈËÈ ÍÀÏĞÀÂËÅÍÈÅ\n";
+					cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n";
 					break;
 				}
 			}
@@ -138,11 +138,11 @@ void Player::createShip(int len)
 				flag = true;
 			}
 		}
-		else if (direction == "ÂÂÅĞÕ" && y >= len) {
+		else if (direction == "ï¿½ï¿½ï¿½ï¿½ï¿½" && y >= len) {
 			for (int j = y; j > y - len; j--) {
 				if (close(j, x) || field[y][x] == '#') {
 					near = false;
-					cout << "ĞßÄÎÌ ÅÑÒÜ ÊÎĞÀÁËÜ! ÂÂÅÄÈÒÅ ÄĞÓÃÈÅ ÊÎÎĞÄÈÍÀÒÛ ÈËÈ ÍÀÏĞÀÂËÅÍÈÅ\n";
+					cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n";
 					break;
 				}
 			}
@@ -153,7 +153,7 @@ void Player::createShip(int len)
 			}
 		}
 		else
-			cout << "ÍÀÏĞÀÂËÅÍÈÅ ÂÂÅÄÅÍÎ ÍÅÊÎĞĞÅÊÒÍÎ ÈËÈ ÊÎĞÀÁËÜ ÂÛØÅË ÇÀ ÃĞÀÍÈÖÛ. ÏÎÏĞÎÁÓÉÒÅ ÑÍÎÂÀ\n\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½\n\n";
 	} while (flag == false);
 }
 void Player::computer_createShip(int len)
@@ -165,18 +165,18 @@ void Player::computer_createShip(int len)
 		if (len != 1) {
 			int direct{ rand() % 4 };
 			if (direct == 0)
-				direction = "ÂÏĞÀÂÎ";
+				direction = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 			else if (direct == 1)
-				direction = "ÂËÅÂÎ";
+				direction = "ï¿½ï¿½ï¿½ï¿½ï¿½";
 			else if (direct == 2)
-				direction = "ÂÂÅĞÕ";
+				direction = "ï¿½ï¿½ï¿½ï¿½ï¿½";
 			else
-				direction = "ÂÍÈÇ";
+				direction = "ï¿½ï¿½ï¿½ï¿½";
 		}
 		else
-			direction = "ÂÏĞÀÂÎ";
+			direction = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		bool near{ true };
-		if (direction == "ÂÏĞÀÂÎ" && x <= 10 - len + 1) {
+		if (direction == "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" && x <= 10 - len + 1) {
 			for (int i = x; i < x + len; i++) {
 				if (close(y, i) || field[y][x] == '#') {
 					near = false;
@@ -189,7 +189,7 @@ void Player::computer_createShip(int len)
 				flag = true;
 			}
 		}
-		else if (direction == "ÂËÅÂÎ" && x >= len) {
+		else if (direction == "ï¿½ï¿½ï¿½ï¿½ï¿½" && x >= len) {
 			for (int i = x; i > x - len; i--) {
 				if (close(y, i) || field[y][x] == '#') {
 					near = false;
@@ -202,7 +202,7 @@ void Player::computer_createShip(int len)
 				flag = true;
 			}
 		}
-		else if (direction == "ÂÍÈÇ" && y <= 10 - len + 1) {
+		else if (direction == "ï¿½ï¿½ï¿½ï¿½" && y <= 10 - len + 1) {
 			for (int j = y; j < y + len; j++) {
 				if (close(j, x) || field[y][x] == '#') {
 					near = false;
@@ -215,7 +215,7 @@ void Player::computer_createShip(int len)
 				flag = true;
 			}
 		}
-		else if (direction == "ÂÂÅĞÕ" && y >= len) {
+		else if (direction == "ï¿½ï¿½ï¿½ï¿½ï¿½" && y >= len) {
 			for (int j = y; j > y - len; j--) {
 				if (close(j, x) || field[y][x] == '#') {
 					near = false;
@@ -370,34 +370,34 @@ void Player::computer_start()
 }
 bool Player::attack(Player& enemy)
 {
-	cout << "ÂÀØÅ ÏÎËÅ                  ÏÎËÅ ÏĞÎÒÈÂÍÈÊÀ\n";
-	cout << "   À Á Â Ã Ä Å Æ Ç È Ê        À Á Â Ã Ä Å Æ Ç È Ê\n";
+	cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½                  ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n";
+	cout << "   ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½        ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½ ï¿½\n";
 
 	for (int i = 1; i < SIZE + 1; i++) {
-		// ---- Ñòğîêà ÑÂÎÅÃÎ ïîëÿ ----
+		// ---- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ----
 		printFieldRow(i);
 
-		// ---- Îòñòóï ìåæäó ïîëÿìè ----
+		// ---- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ----
 		cout << "     ";
 
-		// ---- Ñòğîêà ×ÓÆÎÃÎ ïîëÿ (ñêğûòîãî) ----
+		// ---- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ----
 		enemy.printHiddenFieldRow(i);
 
-		// ---- Îáîçíà÷åíèÿ (òîëüêî â ïåğâûõ ñòğîêàõ) ----
+		// ---- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ----
 		if (i == 1)
-			cout << "       . — ïóñòàÿ êëåòêà";
+			cout << "       . ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 2)
-			cout << "       # — êîğàáëü";
+			cout << "       # ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 3)
-			cout << "       X — ïîïàäàíèå";
+			cout << "       X ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 4)
-			cout << "       o — ïğîìàõ";
+			cout << "       o ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		else if (i == 5)
-			cout << "       @ — êëåòêà, ãäå êîğàáëü íå ìîæåò íàõîäèòüñÿ";
+			cout << "       @ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 
 		putchar('\n');
 	}
-	cout << "ÈÃĞÎÊ, ÄÅËÀÉÒÅ ÂÛÑÒĞÅË!\n";
+	cout << "ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!\n";
 	int x{ 0 }, y{};
 	enemy.createCoords(x, y);
 	putchar('\n');
@@ -412,15 +412,15 @@ bool Player::attack(Player& enemy)
 			(y <= 7 && enemy.field[y + 1][x] == 'X' && enemy.field[y + 2][x] == 'X' && enemy.field[y + 3][x] == '#') ||
 			(x >= 4 && enemy.field[y][x - 1] == 'X' && enemy.field[y][x - 2] == 'X' && enemy.field[y][x - 3] == '#') ||
 			(x <= 7 && enemy.field[y][x + 1] == 'X' && enemy.field[y][x + 2] == 'X' && enemy.field[y][x + 3] == '#')) {
-			cout << "ÏÎÏÀË!\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½!\n";
 		}
 		else {
 			enemy.countShips--;
 			enemy.round(y, x);
-			cout << "ÊÎĞÀÁËÜ ÓÍÈ×ÒÎÆÅÍ!\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!\n";
 		}
 		if (enemy.getCount() != 0)
-			cout << "ÕÎÄÈÒÅ ÑÍÎÂÀ!\n\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!\n\n";
 		return true;
 	}
 	else {
@@ -428,7 +428,7 @@ bool Player::attack(Player& enemy)
 			enemy.hidenField[y][x] = 'o';
 		if (enemy.field[y][x] == '.')
 			enemy.field[y][x] = 'o';
-		cout << "ÌÈÌÎ!\n";
+		cout << "ï¿½ï¿½ï¿½ï¿½!\n";
 		enemy.showHiddenField();
 		return false;
 	}
@@ -458,9 +458,9 @@ bool Player::computer_attack(int& row, int& col, int& direct)
 			(x <= 7 && field[x + 1][y] == 'X' && field[x + 2][y] == 'X' && field[x + 3][y] == '#') ||
 			(y >= 4 && field[x][y - 1] == 'X' && field[x][y - 2] == 'X' && field[x][y - 3] == '#') ||
 			(y <= 7 && field[x][y + 1] == 'X' && field[x][y + 2] == 'X' && field[x][y + 3] == '#')) {
-			cout << "ÊÎÌÏÜŞÒÅĞ ÏÎÏÀË ÏÎ ÂÀØÅÌÓ ÊÎĞÀÁËŞ!\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!\n";
 			showField();
-			cout << "ÊÎÌÏÜŞÒÅĞ ÕÎÄÈÒ ÑÍÎÂÀ!\n\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!\n\n";
 			if (direct == 0)
 				direct = rand() % 4 + 1;
 			if (direct == 1) {
@@ -660,11 +660,11 @@ bool Player::computer_attack(int& row, int& col, int& direct)
 			col = 0;
 			direct = 0;
 			countShips--;
-			cout << "ÊÎÌÏÜŞÒÅĞ ÓÍÈ×ÒÎÆÈË ÂÀØ ÊÎĞÀÁËÜ!\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!\n";
 		}
 		showField();
 		if (getCount() != 0)
-			cout << "ÊÎÌÏÜŞÒÅĞ ÕÎÄÈÒ ÑÍÎÂÀ!\n\n";
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!\n\n";
 		return true;
 	}
 	else {
@@ -716,4 +716,5 @@ bool Player::computer_attack(int& row, int& col, int& direct)
 			} while (flag);
 		}
 	}
+	return false;
 }
